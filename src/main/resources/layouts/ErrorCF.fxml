@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.ErrorSave.ErrorFind">
+   <children>
+      <Text layoutX="79.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Errore: Codice Fiscale non valido" textAlignment="CENTER" wrappingWidth="241.33673095703125">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="back_bt" layoutX="284.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchPane1" text="Menu Principale" />
+      <ImageView fitHeight="114.0" fitWidth="102.0" layoutX="163.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Immagine%202023-07-03%20135826.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

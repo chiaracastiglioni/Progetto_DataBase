@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.Save.VetSave">
+   <children>
+      <Label layoutX="396.0" layoutY="217.0" text="Nome" />
+      <Label layoutX="386.0" layoutY="288.0" text="Cognome" />
+      <Label layoutX="382.0" layoutY="341.0" prefHeight="42.0" prefWidth="60.0" text="Numero di&#10;telefono&#10;" />
+      <Label layoutX="398.0" layoutY="427.0" text="email" />
+      <TextField fx:id="name_tx" layoutX="518.0" layoutY="217.0" prefHeight="26.0" prefWidth="234.0" promptText="Sofia" />
+      <TextField fx:id="surname_tx" layoutX="518.0" layoutY="284.0" prefHeight="26.0" prefWidth="234.0" promptText="Bianchi" />
+      <TextField fx:id="number_tx" layoutX="519.0" layoutY="349.0" prefHeight="26.0" prefWidth="234.0" promptText="3661736326" />
+      <TextField fx:id="email_tx" layoutX="518.0" layoutY="423.0" prefHeight="26.0" prefWidth="234.0" promptText="sofia.bianchi@gmail.com" />
+      <Text layoutX="519.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire dati veterinario" textAlignment="CENTER" wrappingWidth="234.39999999999986" />
+      <Button fx:id="back_bt" layoutX="770.0" layoutY="619.0" mnemonicParsing="false" onAction="#switchPane1" text="Indietro" />
+      <Button fx:id="save_bt" layoutX="870.0" layoutY="618.0" mnemonicParsing="false" onAction="#saveVet" text="Salva" />
+      <AnchorPane prefHeight="701.0" prefWidth="291.0" style="-fx-background-color: #737cde;">
+         <children>
+            <ImageView fitHeight="167.0" fitWidth="166.0" layoutX="66.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Immagine%202023-06-25%20164231.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="369.0" layoutY="498.0" text="Specializzazione" />
+      <TextField fx:id="spec_tx" layoutX="519.0" layoutY="494.0" prefHeight="26.0" prefWidth="234.0" promptText="Chirurgia" />
+      <Label layoutX="383.0" layoutY="544.0" text="Data di&#10;assunzione&#10;" />
+      <TextField fx:id="day_tx" layoutX="519.0" layoutY="549.0" prefHeight="26.0" prefWidth="44.0" promptText="gg" />
+      <TextField fx:id="month_tx" layoutX="614.0" layoutY="549.0" prefHeight="26.0" prefWidth="44.0" promptText="mm" />
+      <TextField fx:id="year_tx" layoutX="713.0" layoutY="549.0" prefHeight="26.0" prefWidth="44.0" promptText="anno" />
+      <TextField fx:id="cf_tx" layoutX="519.0" layoutY="156.0" prefHeight="26.0" prefWidth="234.0" />
+      <Label layoutX="389.0" layoutY="160.0" text="Codice Fiscale" />
+   </children>
+</AnchorPane>

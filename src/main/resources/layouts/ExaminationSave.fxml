@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.Save.ExaminationSave">
+   <children>
+      <Button fx:id="save_btn" layoutX="879.0" layoutY="644.0" mnemonicParsing="false" onAction="#saveExamination" text="Salva" />
+      <Button fx:id="cancel_btn" layoutX="798.0" layoutY="644.0" mnemonicParsing="false" onAction="#switchPane1" text="Annulla" />
+      <AnchorPane prefHeight="700.0" prefWidth="254.0" style="-fx-background-color: #adbaf7;">
+         <children>
+            <ImageView fitHeight="183.0" fitWidth="190.0" layoutX="46.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Immagine%202023-06-22%20140949.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="501.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire dati esaminazione" textAlignment="CENTER" wrappingWidth="253.5999999999999">
+         <font>
+            <Font size="21.0" />
+         </font></Text>
+      <TextField fx:id="animal_name_tx" layoutX="532.0" layoutY="383.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="415.0" layoutY="387.0" prefHeight="18.0" prefWidth="78.0" text="Nome animale" textAlignment="CENTER" />
+      <TextField fx:id="id_master_tx" layoutX="526.0" layoutY="231.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="394.0" layoutY="235.0" prefHeight="18.0" prefWidth="108.0" text="Codice Proprietario" textAlignment="CENTER" />
+      <Text layoutX="300.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sigla esame" wrappingWidth="78.13335571289076" />
+      <TextField fx:id="id_exam_tx" layoutX="268.0" layoutY="147.0" />
+      <Label layoutX="414.0" layoutY="462.0" prefHeight="18.0" prefWidth="78.0" text="Ambulatorio" textAlignment="CENTER" />
+      <Label layoutX="394.0" layoutY="534.0" prefHeight="18.0" prefWidth="112.0" text="Motivazione esame" textAlignment="CENTER" />
+      <TextField fx:id="id_animal_tx" layoutX="528.0" layoutY="305.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="415.0" layoutY="309.0" prefHeight="18.0" prefWidth="78.0" text="Microchip" textAlignment="CENTER" />
+      <TextField fx:id="examMotivation_tx" layoutX="531.0" layoutY="530.0" prefHeight="26.0" prefWidth="253.0" />
+      <TextField fx:id="result_tx" layoutX="536.0" layoutY="600.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="437.0" layoutY="603.0" prefHeight="18.0" prefWidth="33.0" text="Esito" textAlignment="CENTER" />
+      <TableView fx:id="examTableView" layoutX="461.0" layoutY="121.0" prefHeight="79.0" prefWidth="434.0">
+         <columns>
+            <TableColumn fx:id="id_col" prefWidth="219.73336791992188" text="Sigla " />
+            <TableColumn fx:id="name_col" prefWidth="213.8665771484375" text="Nome&#10;" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="clinic_box" layoutX="577.0" layoutY="458.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.Save.RecoverySave">
+   <children>
+      <Button fx:id="save_btn" layoutX="837.0" layoutY="643.0" mnemonicParsing="false" onAction="#saverecovery" text="Salva" />
+      <Button fx:id="cancel_btn" layoutX="757.0" layoutY="643.0" mnemonicParsing="false" onAction="#switchPane1" text="Annulla" />
+      <AnchorPane prefHeight="702.0" prefWidth="334.0" style="-fx-background-color: #33de7a;">
+         <children>
+            <ImageView fitHeight="183.0" fitWidth="190.0" layoutX="78.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Immagine%202023-06-23%20143131.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="506.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire dati ricovero" textAlignment="CENTER" wrappingWidth="253.5999999999999">
+         <font>
+            <Font size="21.0" />
+         </font></Text>
+      <Label layoutX="443.0" layoutY="196.0" prefHeight="34.0" prefWidth="61.0" text="Microchip" textAlignment="CENTER" />
+      <TextField fx:id="microchip_tx" layoutX="536.0" layoutY="199.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="446.0" layoutY="281.0" prefHeight="34.0" prefWidth="61.0" text="Data Inizio" textAlignment="CENTER" />
+      <TextField fx:id="day_tx" layoutX="539.0" layoutY="284.0" prefHeight="26.0" prefWidth="57.0" promptText="gg" />
+      <TextField fx:id="month_tx" layoutX="637.0" layoutY="284.0" prefHeight="26.0" prefWidth="57.0" promptText="mm" />
+      <TextField fx:id="year_tx" layoutX="734.0" layoutY="285.0" prefHeight="26.0" prefWidth="57.0" promptText="anno" />
+      <Label layoutX="442.0" layoutY="455.0" prefHeight="34.0" prefWidth="71.0" text="Orario Inizio" textAlignment="CENTER" />
+      <TextField fx:id="hour_tx" layoutX="539.0" layoutY="460.0" prefHeight="26.0" prefWidth="57.0" promptText="hh" />
+      <TextField fx:id="minut_tx" layoutX="633.0" layoutY="460.0" prefHeight="26.0" prefWidth="57.0" promptText="mm" />
+      <Label layoutX="446.0" layoutY="369.0" prefHeight="34.0" prefWidth="61.0" text="Data Fine" textAlignment="CENTER" />
+      <TextField fx:id="dayF_tx" layoutX="539.0" layoutY="372.0" prefHeight="26.0" prefWidth="57.0" promptText="gg" />
+      <TextField fx:id="monthF_tx" layoutX="637.0" layoutY="372.0" prefHeight="26.0" prefWidth="57.0" promptText="mm" />
+      <TextField fx:id="yearF_tx" layoutX="734.0" layoutY="373.0" prefHeight="26.0" prefWidth="57.0" promptText="anno" />
+      <Label layoutX="443.0" layoutY="532.0" prefHeight="34.0" prefWidth="71.0" text="Orario Fine" textAlignment="CENTER" />
+      <TextField fx:id="hourF_tx" layoutX="540.0" layoutY="537.0" prefHeight="26.0" prefWidth="57.0" promptText="hh" />
+      <TextField fx:id="minutF_tx" layoutX="634.0" layoutY="537.0" prefHeight="26.0" prefWidth="57.0" promptText="mm" />
+      <Text layoutX="538.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durata massimo ricovero di 3 mesi" wrappingWidth="190.0" />
+   </children>
+</AnchorPane>

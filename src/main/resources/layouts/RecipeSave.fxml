@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.Save.RecipeSave">
+   <children>
+      <Button fx:id="save_btn" layoutX="881.0" layoutY="655.0" mnemonicParsing="false" onAction="#saveRecipe" text="Salva" />
+      <Button fx:id="cancel_btn" layoutX="800.0" layoutY="655.0" mnemonicParsing="false" onAction="#switchPane1" text="Annulla" />
+      <AnchorPane prefHeight="700.0" prefWidth="284.0" style="-fx-background-color: #b3e39a;">
+         <children>
+            <ImageView fitHeight="183.0" fitWidth="190.0" layoutX="38.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Immagine%202023-06-23%20143157.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="501.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire dati ricetta" textAlignment="CENTER" wrappingWidth="253.5999999999999">
+         <font>
+            <Font size="21.0" />
+         </font></Text>
+      <TextField fx:id="dose_tx" layoutX="534.0" layoutY="489.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="363.0" layoutY="494.0" prefHeight="18.0" prefWidth="158.0" text="Dose giornaliera del farmaco" textAlignment="CENTER" />
+      <TextField fx:id="dayF_tx" layoutX="545.0" layoutY="603.0" prefHeight="26.0" prefWidth="57.0" promptText="gg" />
+      <TextField fx:id="microchip_tx" layoutX="531.0" layoutY="260.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="434.0" layoutY="264.0" prefHeight="18.0" prefWidth="62.0" text="Microchip" textAlignment="CENTER" />
+      <TextField fx:id="monthF_tx" layoutX="631.0" layoutY="603.0" prefHeight="26.0" prefWidth="57.0" promptText="mm" />
+      <TextField fx:id="yearF_tx" layoutX="729.0" layoutY="603.0" prefHeight="26.0" prefWidth="57.0" promptText="anno" />
+      <Label layoutX="412.0" layoutY="606.0" prefHeight="18.0" prefWidth="98.0" text="Data di scadenza" textAlignment="CENTER" />
+      <Text layoutX="337.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sigla farmaco" wrappingWidth="73.59999999999991" />
+      <TextField fx:id="id_tx" layoutX="303.0" layoutY="106.0" />
+      <TableView fx:id="drugTableView" layoutX="469.0" layoutY="65.0" prefHeight="107.0" prefWidth="444.0">
+         <columns>
+            <TableColumn fx:id="id_col" prefWidth="94.39996337890625" text="Sigla " />
+            <TableColumn fx:id="name_col" prefWidth="133.60003662109375" text="Nome" />
+            <TableColumn fx:id="description_col" prefWidth="143.466796875" text="Descrizione" />
+            <TableColumn fx:id="price_col" prefWidth="72.533203125" text="Prezzo" />
+         </columns>
+      </TableView>
+      <TextField fx:id="duration_tx" layoutX="539.0" layoutY="416.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="413.0" layoutY="421.0" prefHeight="18.0" prefWidth="83.0" text="Durata Terapia" textAlignment="CENTER" />
+      <TextField fx:id="id_master_tx" layoutX="536.0" layoutY="200.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="431.0" layoutY="195.0" prefHeight="40.0" prefWidth="74.0" text="Codice Fiscale&#10;Proprietario" textAlignment="CENTER" />
+      <Label layoutX="434.0" layoutY="555.0" prefHeight="18.0" prefWidth="74.0" text="Ambulatorio" textAlignment="CENTER" />
+      <TextField fx:id="animal_name_tx" layoutX="535.0" layoutY="337.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="417.0" layoutY="339.0" prefHeight="18.0" prefWidth="83.0" text="Nome animale" textAlignment="CENTER" />
+      <ComboBox fx:id="clinic_box" layoutX="585.0" layoutY="552.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

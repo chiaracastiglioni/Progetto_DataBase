@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.Save.AllergiesSave">
+   <children>
+      <Label layoutX="433.0" layoutY="328.0" prefHeight="34.0" prefWidth="81.0" text="Antistaminico" textAlignment="CENTER" />
+      <TextField fx:id="anti_tx" layoutX="530.0" layoutY="332.0" prefHeight="26.0" prefWidth="253.0" promptText="Non obbligatorio" />
+      <Button fx:id="save_btn" layoutX="879.0" layoutY="644.0" mnemonicParsing="false" onAction="#saveAllergies" text="Salva" />
+      <Button fx:id="cancel_btn" layoutX="798.0" layoutY="644.0" mnemonicParsing="false" onAction="#switchPane1" text="Annulla" />
+      <AnchorPane prefHeight="700.0" prefWidth="254.0" style="-fx-background-color: #e3f78f;">
+         <children>
+            <ImageView fitHeight="183.0" fitWidth="190.0" layoutX="59.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Immagine%202023-06-26%20163214.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="501.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire dati allergia" textAlignment="CENTER" wrappingWidth="253.5999999999999">
+         <font>
+            <Font size="21.0" />
+         </font></Text>
+      <TextField fx:id="period_tx" layoutX="530.0" layoutY="404.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="420.0" layoutY="408.0" prefHeight="18.0" prefWidth="94.0" text="Periodo dell'anno" textAlignment="CENTER" />
+      <Label layoutX="426.0" layoutY="480.0" prefHeight="18.0" prefWidth="94.0" text="Livello di gravità" textAlignment="CENTER" />
+      <TextField fx:id="gravity_tx" layoutX="530.0" layoutY="476.0" prefHeight="26.0" prefWidth="253.0" />
+      <TextField fx:id="symptom_tx" layoutX="530.0" layoutY="544.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="445.0" layoutY="548.0" prefHeight="18.0" prefWidth="57.0" text="Sintomo" textAlignment="CENTER" />
+      <TextField fx:id="day_tx" layoutX="530.0" layoutY="617.0" prefHeight="26.0" prefWidth="57.0" promptText="gg" />
+      <TextField fx:id="microchip_tx" layoutX="530.0" layoutY="262.0" prefHeight="26.0" prefWidth="253.0" />
+      <Label layoutX="436.0" layoutY="266.0" prefHeight="18.0" prefWidth="73.0" text="Microchip" textAlignment="CENTER" />
+      <TextField fx:id="month_tx" layoutX="628.0" layoutY="617.0" prefHeight="26.0" prefWidth="57.0" promptText="mm" />
+      <TextField fx:id="year_tx" layoutX="726.0" layoutY="617.0" prefHeight="26.0" prefWidth="57.0" promptText="anno" />
+      <Label layoutX="445.0" layoutY="621.0" prefHeight="18.0" prefWidth="57.0" text="Data inizio" textAlignment="CENTER" />
+      <TableView fx:id="allergiesTableView" layoutX="501.0" layoutY="100.0" prefHeight="130.0" prefWidth="411.0">
+         <columns>
+            <TableColumn fx:id="id_col" prefWidth="212.0" text="Sigla " />
+            <TableColumn fx:id="cause_col" prefWidth="204.00006103515625" text="Causa" />
+         </columns>
+      </TableView>
+      <Text layoutX="346.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sigla allergia" wrappingWidth="73.59999999999991" />
+      <TextField fx:id="id_tx" layoutX="308.0" layoutY="142.0" />
+   </children>
+</AnchorPane>

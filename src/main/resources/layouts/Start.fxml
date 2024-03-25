@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.StartController">
+  <tabs>
+    <Tab text="Pazienti">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" layoutX="14.0" layoutY="14.0" prefHeight="700.0" prefWidth="950.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="699.0" prefWidth="301.0" style="-fx-background-color: #d7f5f0;">
+                           <children>
+                              <Button fx:id="patientAdd_btn" layoutX="65.0" layoutY="224.0" mnemonicParsing="false" onAction="#addPatientPane" prefWidth="120.0" text="Aggiungi Paziente&#10;a un cliente già &#10;registrato&#10;" textAlignment="CENTER" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Immagine%202023-07-03%20152951.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="findmicro_bt" layoutX="121.0" layoutY="397.0" mnemonicParsing="false" onAction="#findAnimalMicrochip" text="Cerca animale&#10;con microchip&#10;" />
+                              <Button fx:id="findname_bt" layoutX="121.0" layoutY="531.0" mnemonicParsing="false" onAction="#findByName" text="Cerca animale&#10;con nome&#10;" />
+                              <TextField fx:id="micro_tx" layoutX="50.0" layoutY="350.0" promptText="Microchip" />
+                              <TextField fx:id="findName_tx" layoutX="50.0" layoutY="473.0" />
+                              <Button fx:id="back_bt" layoutX="49.0" layoutY="398.0" mnemonicParsing="false" onAction="#switchPane1" prefHeight="39.0" prefWidth="64.0" text="Indietro" />
+                              <Button fx:id="back1_bt" layoutX="47.0" layoutY="533.0" mnemonicParsing="false" onAction="#switchPane1" prefHeight="39.0" prefWidth="67.0" text="Indietro" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="animalTableView" layoutX="-1.0" layoutY="-3.0" prefHeight="661.0" prefWidth="647.0">
+                                <columns>
+                                  <TableColumn fx:id="id_col" prefWidth="115.20001524686813" text="Codice&#10;Microchip&#10;" />
+                                  <TableColumn fx:id="name_col" prefWidth="103.20001220703125" text="Nome" />
+                                    <TableColumn fx:id="gender_col" prefWidth="50.39991760253906" text="Sesso" />
+                                    <TableColumn fx:id="date_col" prefWidth="86.13336181640625" text="Data di &#10;nascita&#10;" />
+                                    <TableColumn fx:id="race_col" prefWidth="86.9332275390625" text="Razza" />
+                                    <TableColumn fx:id="master_col" prefWidth="132.2667236328125" text="Codice &#10;Padrone&#10;" />
+                                    <TableColumn fx:id="animal_species_col" prefWidth="69.33331298828125" text="Specie &#10;animale" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Clienti">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane layoutX="3.0" layoutY="2.0" prefHeight="669.0" prefWidth="250.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="200.0" style="-fx-background-color: #f2bdef;">
+                           <children>
+                              <Button fx:id="clientAdd_btn" layoutX="56.0" layoutY="276.0" mnemonicParsing="false" onAction="#saveClient" prefHeight="42.0" prefWidth="134.0" text="Aggiungi Cliente" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Immagine%202023-07-02%20141417.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="numAnimal_bt" layoutX="106.0" layoutY="521.0" mnemonicParsing="false" onAction="#findAnimalNumber" prefWidth="120.0" text="Numero animali&#10;posseduti&#10;" textAlignment="CENTER" />
+                              <TextField fx:id="cfClient_tx" layoutX="49.0" layoutY="404.0" promptText="Codice Fiscale" />
+                              <Button fx:id="backPane_bt" layoutX="34.0" layoutY="519.0" mnemonicParsing="false" onAction="#deleteResearch" prefHeight="46.0" prefWidth="63.0" text="Indietro" />
+                              <Label fx:id="numberA_label" layoutX="81.0" layoutY="456.0" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: #fafafa;" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <TableView fx:id="personTableView" layoutX="254.0" layoutY="-1.0" prefHeight="671.0" prefWidth="696.0">
+                    <columns>
+                      <TableColumn fx:id="cfC_col" prefWidth="173.86669921875" text="Codice&#10;Fiscale" />
+                      <TableColumn fx:id="nameClient_col" prefWidth="124.53326416015625" text="Nome" />
+                        <TableColumn fx:id="surname_col" prefWidth="147.99990844726562" text="Cognome" />
+                        <TableColumn fx:id="number_col" prefWidth="109.86663818359375" text="Numero di &#10;telefono" />
+                        <TableColumn fx:id="email_col" prefWidth="140.800048828125" text="e-mail" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text="Prestazioni">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f7f0cd;">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="135.0" layoutX="123.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-22%20140815.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addVacination_bt" layoutX="107.0" layoutY="243.0" mnemonicParsing="false" onAction="#addVacination" prefWidth="160.0" text="Aggiungi vaccino" textAlignment="CENTER" />
+                  <ImageView fitHeight="138.0" fitWidth="137.0" layoutX="680.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-22%20141248.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addIntervention_bt" layoutX="668.0" layoutY="243.0" mnemonicParsing="false" onAction="#addIntervention" prefWidth="160.0" text="Aggiungi Intervento" />
+                  <Button fx:id="addMeet" layoutX="249.0" layoutY="523.0" mnemonicParsing="false" onAction="#saveMeet" prefWidth="160.0" text="Aggiungi appuntamento" />
+                  <Button fx:id="addRecipe_bt" layoutX="530.0" layoutY="523.0" mnemonicParsing="false" onAction="#addRecipe" prefWidth="160.0" text="Aggiungi ricetta" />
+                  <ImageView fitHeight="132.0" fitWidth="139.0" layoutX="545.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-23%20143157.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="136.0" fitWidth="158.0" layoutX="253.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-23%20151312.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addExamination_bt" layoutX="398.0" layoutY="243.0" mnemonicParsing="false" onAction="#addExamination" prefWidth="160.0" text="Aggiungi esame" />
+                  <ImageView fitHeight="136.0" fitWidth="119.0" layoutX="419.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-22%20140949.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Staff">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="vetTableView" layoutX="240.0" prefHeight="669.0" prefWidth="714.0">
+                    <columns>
+                      <TableColumn fx:id="cfVet_col" prefWidth="138.4000701904297" text="Codice &#10;Fiscale" />
+                      <TableColumn fx:id="nameVet_col" prefWidth="67.466552734375" text="Nome" />
+                        <TableColumn fx:id="surnameVet_col" prefWidth="80.00003051757812" text="Cognome" />
+                        <TableColumn fx:id="numberVet_col" prefWidth="95.2000732421875" text="Telefono" />
+                        <TableColumn fx:id="specialization_col" prefWidth="97.5999755859375" text="Specializzazione" />
+                        <TableColumn fx:id="hireDate_col" prefWidth="92.0" text="Data di&#10;assunzione&#10;" />
+                        <TableColumn fx:id="emailVet_col" prefWidth="146.4000244140625" text="e-mail" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane prefHeight="674.0" prefWidth="240.0" style="-fx-background-color: #cdd7fa;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Immagine%202023-06-23%20145551.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="addVet_bt" layoutX="70.0" layoutY="300.0" mnemonicParsing="false" onAction="#saveVet" prefWidth="100.0" text="Aggiungi &#10;medico" textAlignment="CENTER" />
+                        <Button fx:id="nextMeet_bt" layoutX="74.0" layoutY="466.0" mnemonicParsing="false" onAction="#nextMeet" prefWidth="100.0" text="Prossimo &#10;appuntamento" textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Ricovero">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutX="-3.0" prefHeight="673.0" prefWidth="370.0" style="-fx-background-color: #f2dfd0;">
+                     <children>
+                        <ImageView fitHeight="202.0" fitWidth="236.0" layoutX="75.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Immagine%202023-06-23%20143131.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="addRecovery_bt" layoutX="563.0" layoutY="85.0" mnemonicParsing="false" onAction="#addRecovery" prefWidth="200.0" text="Aggiungi ricovero" />
+                  <Button fx:id="maxRecovery_bt" layoutX="568.0" layoutY="305.0" mnemonicParsing="false" onAction="#maxRecovery" prefWidth="200.0" text="Durata massima&#10;di ricovero" textAlignment="CENTER" />
+                  <Button fx:id="viewListR_bt" layoutX="564.0" layoutY="425.0" mnemonicParsing="false" onAction="#viewListR" prefHeight="26.0" prefWidth="198.0" text="Visualizza Listino Prezzi" />
+                  <Button fx:id="addListR" layoutX="569.0" layoutY="560.0" mnemonicParsing="false" onAction="#addListR" prefHeight="26.0" prefWidth="198.0" text="Modifica Listino Prezzi" />
+                  <Label fx:id="maxRecovery_label" layoutX="612.0" layoutY="241.0" prefHeight="18.0" prefWidth="102.0" style="-fx-background-color: #f0ead5;" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="recoveryView_bt" layoutX="568.0" layoutY="170.0" mnemonicParsing="false" onAction="#viewRecovery" prefWidth="200.0" text="Visualizza Ricovero animale" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Libretto">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="670.0" prefWidth="311.0" style="-fx-background-color: #d0f2d3;">
+                     <children>
+                        <ImageView fitHeight="184.0" fitWidth="216.0" layoutX="71.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Immagine%202023-06-26%20164249.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="addMalaise_bt" layoutX="421.0" layoutY="209.0" mnemonicParsing="false" onAction="#addMalaise" prefHeight="39.0" prefWidth="160.0" text="Aggiungi malattia" />
+                  <Button fx:id="addAllergies_bt" layoutX="550.0" layoutY="108.0" mnemonicParsing="false" onAction="#addAllergies" prefHeight="39.0" prefWidth="160.0" text="Aggiungi allergia" />
+                  <Button fx:id="listView_bt" layoutX="550.0" layoutY="317.0" mnemonicParsing="false" onAction="#findListView" prefHeight="39.0" prefWidth="160.0" text="Visualizza libretto" />
+                  <Button fx:id="illFrequenze_bt" layoutX="694.0" layoutY="424.0" mnemonicParsing="false" onAction="#findIdIll" prefHeight="39.0" prefWidth="160.0" text="Visualizza malattia&#10;più frequente" textAlignment="CENTER" />
+                  <Button fx:id="vacinationTable_bt" layoutX="550.0" layoutY="528.0" mnemonicParsing="false" onAction="#findVacinationByMicro" prefHeight="39.0" prefWidth="160.0" text="Visualizza tabella&#10;dei vaccini&#10;" textAlignment="CENTER" />
+                  <Button fx:id="updatedMalaise_bt" layoutX="667.0" layoutY="216.0" mnemonicParsing="false" onAction="#updateMalaise" prefHeight="39.0" prefWidth="160.0" text="Modifica malattia" />
+                  <TableView fx:id="fequenceTableView" layoutX="405.0" layoutY="395.0" prefHeight="98.0" prefWidth="246.0">
+                    <columns>
+                      <TableColumn fx:id="id_ill_col" prefWidth="123.20001220703125" text="Sigla Malattia" />
+                      <TableColumn fx:id="frequenze_col" prefWidth="122.4000244140625" text="Frequenza" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Vademecum">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f2d0ed;">
+               <children>
+                  <Button fx:id="vax_bt" layoutX="404.0" layoutY="316.0" mnemonicParsing="false" onAction="#viewVax" prefWidth="120.0" text="Visualizza Vaccini" />
+                  <Button fx:id="allergyView_bt" layoutX="686.0" layoutY="316.0" mnemonicParsing="false" onAction="#viewAllergy" prefWidth="120.0" text="Visualizza Allergie" />
+                  <Button fx:id="illnesView_bt" layoutX="687.0" layoutY="540.0" mnemonicParsing="false" onAction="#viewIllnes" prefWidth="120.0" text="Visualizza Malattie" />
+                  <Button fx:id="examView_bt" layoutX="137.0" layoutY="316.0" mnemonicParsing="false" onAction="#viewExam" prefWidth="120.0" text="Visualizza Esami" />
+                  <Button fx:id="surgeryView_bt" layoutX="141.0" layoutY="537.0" mnemonicParsing="false" onAction="#viewSurgery" prefHeight="26.0" prefWidth="133.0" text="Visualizza Interventi" />
+                  <Text layoutX="255.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In questa sezione si può visualizzare il database della clinica veterinaria rispetto:&#10;-Vaccini&#10;-Esami&#10;-Interventi&#10;-Malattie&#10;-Farmaci&#10;-Allergie&#10;" wrappingWidth="443.70391845703125" />
+                  <ImageView fitHeight="119.0" fitWidth="139.0" layoutX="133.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-26%20162637.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="114.0" fitWidth="155.0" layoutX="392.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-26%20163512.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="78.0" layoutX="708.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-26%20163214.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="112.0" fitWidth="153.0" layoutX="133.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-26%20162745.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="116.0" fitWidth="115.0" layoutX="690.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-06-26%20162959.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addExam_bt" layoutX="139.0" layoutY="355.0" mnemonicParsing="false" onAction="#addExam" prefHeight="26.0" prefWidth="118.0" text="Aggiungi Esame" />
+                  <Button fx:id="addVax_bt" layoutX="405.0" layoutY="352.0" mnemonicParsing="false" onAction="#addVax" prefHeight="26.0" prefWidth="118.0" text="Aggiungi Vaccini" />
+                  <Button fx:id="addAllergy_bt" layoutX="687.0" layoutY="352.0" mnemonicParsing="false" onAction="#addAllergy" prefHeight="26.0" prefWidth="118.0" text="Aggiungi Allergie" />
+                  <Button fx:id="addSurgery_bt" layoutX="142.0" layoutY="576.0" mnemonicParsing="false" onAction="#addSurgery" prefHeight="26.0" prefWidth="130.0" text="Aggiungi Intervento" />
+                  <Button fx:id="addIllnes_bt" layoutX="687.0" layoutY="578.0" mnemonicParsing="false" onAction="#addIllnes" prefHeight="26.0" prefWidth="118.0" text="Aggiungi Malattia" />
+                  <ImageView fitHeight="116.0" fitWidth="173.0" layoutX="390.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Immagine%202023-07-07%20231125.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="drugView_bt" layoutX="404.0" layoutY="537.0" mnemonicParsing="false" onAction="#viewDrug" prefWidth="120.0" text="Visualizza Farmaco" />
+                  <Button fx:id="addDrug_bt" layoutX="404.0" layoutY="576.0" mnemonicParsing="false" onAction="#addDrug" prefWidth="120.0" text="Aggiungi Farmaco" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

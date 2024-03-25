@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unibo.JavaFX.TableView.FindRecovery">
+   <children>
+      <Text layoutX="256.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ricoveri" textAlignment="CENTER" wrappingWidth="238.13671875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TableView fx:id="recoveryTable" layoutX="38.0" layoutY="94.0" prefHeight="254.0" prefWidth="674.0">
+         <columns>
+            <TableColumn fx:id="date_col" prefWidth="178.3999900817871" text="Data Inizio" />
+            <TableColumn fx:id="dateF_col" prefWidth="197.6000518798828" text="Data Fine" />
+            <TableColumn fx:id="rangeI_col" prefWidth="149.5999755859375" text="Range Prezzo Inizio" />
+            <TableColumn fx:id="rangeF_col" prefWidth="149.5999755859375" text="Range Prezzo Fine" />
+         </columns>
+      </TableView>
+      <Button fx:id="back_bt" layoutX="668.0" layoutY="453.0" mnemonicParsing="false" onAction="#switchPane1" text="Indietro" />
+      <Label layoutX="176.0" layoutY="392.0" text="Inserire Microchip" />
+      <TextField fx:id="microchip_tx" layoutX="318.0" layoutY="388.0" />
+      <Button fx:id="findRecoveryByMicro_bt" layoutX="529.0" layoutY="388.0" mnemonicParsing="false" onAction="#findRecoveryByMicro" text="Cerca" />
+   </children>
+</AnchorPane>
